@@ -1,0 +1,447 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="bbe9391b-2b47-40e7-8d64-5ecd35b9317d" name="Default" comment="" />
+    <ignored path="xiaomiweb.iws" />
+    <ignored path=".idea/workspace.xml" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
+  <component name="CreatePatchCommitExecutor">
+    <option name="PATCH_PATH" value="" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
+  <component name="FavoritesManager">
+    <favorites_list name="xiaomiweb" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file leaf-file-name="miweb.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/miweb.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.8735441">
+              <caret line="277" column="0" selection-start-line="277" selection-start-column="0" selection-end-line="277" selection-end-column="0" />
+              <folding>
+                <element signature="n#head#0;n#html#0;n#!!top" expanded="false" />
+                <element signature="n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+                <element signature="n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+                <element signature="n#ul#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+                <element signature="n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+                <element signature="n#style#0;n#a#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#a#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#svg#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#div#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+                <element signature="n#style#0;n#a#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#a#1;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#div#3;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+                <element signature="n#div#4;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+                <element signature="n#style#0;n#span#0;n#div#4;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#div#5;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+                <element signature="n#style#0;n#div#9;n#div#5;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#img#0;n#a#1;n#div#1;n#div#9;n#div#5;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#6;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#div#6;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+                <element signature="n#style#0;n#span#0;n#div#6;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#div#7;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+                <element signature="n#div#0;n#div#7;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="miweb.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/miweb.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-16.058823">
+              <caret line="81" column="28" selection-start-line="81" selection-start-column="28" selection-end-line="81" selection-end-column="28" />
+              <folding>
+                <element signature="e#25#72#0" expanded="false" />
+                <element signature="e#86#185#0" expanded="false" />
+                <element signature="e#193#280#0" expanded="false" />
+                <element signature="e#292#334#0" expanded="false" />
+                <element signature="e#346#412#0" expanded="false" />
+                <element signature="e#424#518#0" expanded="false" />
+                <element signature="e#533#664#0" expanded="false" />
+                <element signature="e#679#809#0" expanded="false" />
+                <element signature="e#839#906#0" expanded="false" />
+                <element signature="e#948#1021#0" expanded="false" />
+                <element signature="e#1026#1098#0" expanded="false" />
+                <element signature="e#1114#1134#0" expanded="false" />
+                <element signature="e#1159#1180#0" expanded="false" />
+                <element signature="e#1190#1274#0" expanded="false" />
+                <element signature="e#1442#1539#0" expanded="false" />
+                <element signature="e#1544#1642#0" expanded="false" />
+                <element signature="e#1760#1855#0" expanded="false" />
+                <element signature="e#1939#2041#0" expanded="false" />
+                <element signature="e#2053#2085#0" expanded="false" />
+                <element signature="e#2099#2171#0" expanded="false" />
+                <element signature="e#2186#2322#0" expanded="false" />
+                <element signature="e#2486#2549#0" expanded="false" />
+                <element signature="e#2564#2717#0" expanded="false" />
+                <element signature="e#2730#2774#0" expanded="false" />
+                <element signature="e#2782#2860#0" expanded="false" />
+                <element signature="e#2866#2952#0" expanded="false" />
+                <element signature="e#2959#3139#0" expanded="false" />
+                <element signature="e#3144#3436#0" expanded="false" />
+                <element signature="e#3453#3511#0" expanded="false" />
+                <element signature="e#3527#3623#0" expanded="false" />
+                <element signature="e#3643#3748#0" expanded="false" />
+                <element signature="e#3759#3823#0" expanded="false" />
+                <element signature="e#3846#3879#0" expanded="false" />
+                <element signature="e#3884#4006#0" expanded="false" />
+                <element signature="e#4017#4086#0" expanded="false" />
+                <element signature="e#4097#4136#0" expanded="false" />
+                <element signature="e#4147#4186#0" expanded="false" />
+                <element signature="e#4197#4236#0" expanded="false" />
+                <element signature="e#4330#4447#0" expanded="false" />
+                <element signature="e#4511#4669#0" expanded="false" />
+                <element signature="e#4766#4887#0" expanded="false" />
+                <element signature="e#4899#5041#0" expanded="false" />
+                <element signature="e#5053#5094#0" expanded="false" />
+                <element signature="e#5112#5166#0" expanded="false" />
+                <element signature="e#5179#5321#0" expanded="false" />
+                <element signature="e#5332#5399#0" expanded="false" />
+                <element signature="e#5411#5506#0" expanded="false" />
+                <element signature="e#5516#5609#0" expanded="false" />
+                <element signature="e#5620#5693#0" expanded="false" />
+                <element signature="e#5703#5879#0" expanded="false" />
+                <element signature="e#5889#6014#0" expanded="false" />
+                <element signature="e#6027#6175#0" expanded="false" />
+                <element signature="e#6185#6262#0" expanded="false" />
+                <element signature="e#6269#6314#0" expanded="false" />
+                <element signature="e#6321#6398#0" expanded="false" />
+                <element signature="e#6407#6496#0" expanded="false" />
+                <element signature="e#6507#6599#0" expanded="false" />
+                <element signature="e#6607#6821#0" expanded="false" />
+                <element signature="e#6829#7008#0" expanded="false" />
+                <element signature="e#7016#7196#0" expanded="false" />
+                <element signature="e#7204#7325#0" expanded="false" />
+                <element signature="e#7333#7542#0" expanded="false" />
+                <element signature="e#7550#7733#0" expanded="false" />
+                <element signature="e#7745#7922#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+        <option value="CSS File" />
+      </list>
+    </option>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/miweb.html" />
+        <option value="$PROJECT_DIR$/miweb.css" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" />
+  <component name="JsBuildToolPackageJson" detection-done="true" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="309" />
+    <option name="y" value="171" />
+    <option name="width" value="1142" />
+    <option name="height" value="800" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="false">
+    <OptionsSetting value="true" id="Add" />
+    <OptionsSetting value="true" id="Remove" />
+    <OptionsSetting value="true" id="Checkout" />
+    <OptionsSetting value="true" id="Update" />
+    <OptionsSetting value="true" id="Status" />
+    <OptionsSetting value="true" id="Edit" />
+    <ConfirmationsSetting value="0" id="Add" />
+    <ConfirmationsSetting value="0" id="Remove" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+      <manualOrder />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="xiaomiweb" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="xiaomiweb" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="xiaomiweb" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+      <pane id="Scratches" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="HbShouldOpenHtmlAsHb" value="" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="settings.editor.selected.configurable" value="File.Encoding" />
+    <property name="settings.editor.splitter.proportion" value="0.2" />
+  </component>
+  <component name="RunManager" selected="JavaScript Debug.miweb.html">
+    <configuration default="false" name="miweb.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/xiaomiweb/miweb.html">
+      <method />
+    </configuration>
+    <configuration default="true" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
+      <method />
+    </configuration>
+    <configuration default="true" type="DartTestRunConfigurationType" factoryName="Dart Test">
+      <method />
+    </configuration>
+    <configuration default="true" type="JavaScriptTestRunnerKarma" factoryName="Karma" config-file="">
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
+      <method />
+    </configuration>
+    <configuration default="true" type="NodeJSConfigurationType" factoryName="Node.js" working-dir="">
+      <method />
+    </configuration>
+    <configuration default="true" type="cucumber.js" factoryName="Cucumber.js">
+      <option name="cucumberJsArguments" value="" />
+      <option name="executablePath" />
+      <option name="filePath" />
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.npm" factoryName="npm">
+      <command value="run-script" />
+      <scripts />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="mocha-javascript-test-runner" factoryName="Mocha">
+      <node-options />
+      <working-directory>$PROJECT_DIR$</working-directory>
+      <pass-parent-env>true</pass-parent-env>
+      <envs />
+      <ui>bdd</ui>
+      <extra-mocha-options />
+      <test-kind>DIRECTORY</test-kind>
+      <test-directory />
+      <recursive>false</recursive>
+      <method />
+    </configuration>
+    <list size="1">
+      <item index="0" class="java.lang.String" itemvalue="JavaScript Debug.miweb.html" />
+    </list>
+    <recent_temporary>
+      <list size="1">
+        <item index="0" class="java.lang.String" itemvalue="JavaScript Debug.miweb.html" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false" />
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="bbe9391b-2b47-40e7-8d64-5ecd35b9317d" name="Default" comment="" />
+      <created>1499525314105</created>
+      <option name="number" value="Default" />
+      <updated>1499525314105</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="309" y="171" width="1142" height="800" extended-state="0" />
+    <editor active="true" />
+    <layout>
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24957411" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+    </layout>
+  </component>
+  <component name="Vcs.Log.UiProperties">
+    <option name="RECENTLY_FILTERED_USER_GROUPS">
+      <collection />
+    </option>
+    <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+      <collection />
+    </option>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager />
+    <watches-manager />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="jar://$APPLICATION_HOME_DIR$/lib/webstorm.jar!/resources/html5-schema/html5/legacy.rnc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3329493">
+          <caret line="651" column="18" selection-start-line="651" selection-start-column="18" selection-end-line="651" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/lib/webstorm.jar!/resources/html5-schema/html5/block.rnc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3329493">
+          <caret line="227" column="0" selection-start-line="227" selection-start-column="0" selection-end-line="228" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/miweb.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-16.058823">
+          <caret line="81" column="28" selection-start-line="81" selection-start-column="28" selection-end-line="81" selection-end-column="28" />
+          <folding>
+            <element signature="e#25#72#0" expanded="false" />
+            <element signature="e#86#185#0" expanded="false" />
+            <element signature="e#193#280#0" expanded="false" />
+            <element signature="e#292#334#0" expanded="false" />
+            <element signature="e#346#412#0" expanded="false" />
+            <element signature="e#424#518#0" expanded="false" />
+            <element signature="e#533#664#0" expanded="false" />
+            <element signature="e#679#809#0" expanded="false" />
+            <element signature="e#839#906#0" expanded="false" />
+            <element signature="e#948#1021#0" expanded="false" />
+            <element signature="e#1026#1098#0" expanded="false" />
+            <element signature="e#1114#1134#0" expanded="false" />
+            <element signature="e#1159#1180#0" expanded="false" />
+            <element signature="e#1190#1274#0" expanded="false" />
+            <element signature="e#1442#1539#0" expanded="false" />
+            <element signature="e#1544#1642#0" expanded="false" />
+            <element signature="e#1760#1855#0" expanded="false" />
+            <element signature="e#1939#2041#0" expanded="false" />
+            <element signature="e#2053#2085#0" expanded="false" />
+            <element signature="e#2099#2171#0" expanded="false" />
+            <element signature="e#2186#2322#0" expanded="false" />
+            <element signature="e#2486#2549#0" expanded="false" />
+            <element signature="e#2564#2717#0" expanded="false" />
+            <element signature="e#2730#2774#0" expanded="false" />
+            <element signature="e#2782#2860#0" expanded="false" />
+            <element signature="e#2866#2952#0" expanded="false" />
+            <element signature="e#2959#3139#0" expanded="false" />
+            <element signature="e#3144#3436#0" expanded="false" />
+            <element signature="e#3453#3511#0" expanded="false" />
+            <element signature="e#3527#3623#0" expanded="false" />
+            <element signature="e#3643#3748#0" expanded="false" />
+            <element signature="e#3759#3823#0" expanded="false" />
+            <element signature="e#3846#3879#0" expanded="false" />
+            <element signature="e#3884#4006#0" expanded="false" />
+            <element signature="e#4017#4086#0" expanded="false" />
+            <element signature="e#4097#4136#0" expanded="false" />
+            <element signature="e#4147#4186#0" expanded="false" />
+            <element signature="e#4197#4236#0" expanded="false" />
+            <element signature="e#4330#4447#0" expanded="false" />
+            <element signature="e#4511#4669#0" expanded="false" />
+            <element signature="e#4766#4887#0" expanded="false" />
+            <element signature="e#4899#5041#0" expanded="false" />
+            <element signature="e#5053#5094#0" expanded="false" />
+            <element signature="e#5112#5166#0" expanded="false" />
+            <element signature="e#5179#5321#0" expanded="false" />
+            <element signature="e#5332#5399#0" expanded="false" />
+            <element signature="e#5411#5506#0" expanded="false" />
+            <element signature="e#5516#5609#0" expanded="false" />
+            <element signature="e#5620#5693#0" expanded="false" />
+            <element signature="e#5703#5879#0" expanded="false" />
+            <element signature="e#5889#6014#0" expanded="false" />
+            <element signature="e#6027#6175#0" expanded="false" />
+            <element signature="e#6185#6262#0" expanded="false" />
+            <element signature="e#6269#6314#0" expanded="false" />
+            <element signature="e#6321#6398#0" expanded="false" />
+            <element signature="e#6407#6496#0" expanded="false" />
+            <element signature="e#6507#6599#0" expanded="false" />
+            <element signature="e#6607#6821#0" expanded="false" />
+            <element signature="e#6829#7008#0" expanded="false" />
+            <element signature="e#7016#7196#0" expanded="false" />
+            <element signature="e#7204#7325#0" expanded="false" />
+            <element signature="e#7333#7542#0" expanded="false" />
+            <element signature="e#7550#7733#0" expanded="false" />
+            <element signature="e#7745#7922#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/miweb.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.8735441">
+          <caret line="277" column="0" selection-start-line="277" selection-start-column="0" selection-end-line="277" selection-end-column="0" />
+          <folding>
+            <element signature="n#head#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#ul#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#a#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#svg#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#div#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#a#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#1;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#div#3;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#4;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#span#0;n#div#4;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#div#5;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#div#9;n#div#5;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#a#1;n#div#1;n#div#9;n#div#5;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#6;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#div#6;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#span#0;n#div#6;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#div#7;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#0;n#div#7;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

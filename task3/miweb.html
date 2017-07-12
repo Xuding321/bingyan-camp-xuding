@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<?xml version="1.0" standalone="no"?>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" >
+    <link type="text/css" rel="stylesheet" href="miweb.css" charset="UTF-8">
+    <title>小米商城 - 小米6、红米Note 4X、小米Max 2、小米笔记本官方网站</title>
+    <script src="jquery.js"></script>
+    <script type="text/javascript">
+        var i = 0 ;
+        var timer;
+
+        $(document).ready(function(){
+            //用jquery方法设置第一张图片显示，其余隐藏
+            $('.list').eq(0).show().siblings('list').hide();
+
+            //调用showTime()函数（轮播函数）
+            showTime();
+
+            //当鼠标经过下面的数字时，触发两个事件（鼠标悬停和鼠标离开）
+            $('.tab').hover(function(){
+                //获取当前i的值，并显示，同时还要清除定时器
+                i = $(this).index();
+                Show();
+                clearInterval(timer);
+            },function(){
+                //
+                showTime();
+            });
+
+            //鼠标点击左侧的箭头
+            $('#prev').click(function(){
+                clearInterval(timer);
+                if(i == 0){
+                    i = 5;//注意此时i的值
+                }
+                i--;
+                Show();
+                showTime();
+            });
+
+            //鼠标点击右侧的箭头
+            $('#next').click(function(){
+                clearInterval(timer);
+                if(i == 4){
+                    i = -1;//注意此时i的值
+                }
+                i++;
+                Show();
+                showTime();
+            });
+
+        });
+
+
+        //创建一个showTime函数
+        function showTime(){
+            //定时器
+            timer = setInterval(function(){
+                //调用一个Show()函数
+                Show();
+                i++;
+                //当图片是最后一张的后面时，设置图片为第一张
+                if(i==5){
+                    i=0;
+                }
+            },2000);
+        }
+
+
+        //创建一个Show函数
+        function Show(){
+            //在这里可以用其他jquery的动画
+            $('.list').eq(i).fadeIn(300).siblings('.list').fadeOut(300);
+
+            //给.tab创建一个新的Class为其添加一个新的样式，并且要在css代码中设置该样式
+            $('.tab').eq(i).addClass('bg').siblings('.tab').removeClass('bg');
+
+            /*
+             * css中添加的代码：
+             * .bg{ background-color: #f00; }
+             * */
+        }
+    </script>
+</head>
+<body>
+<div class="bigcontainer">
+<div class="topbar">
+    <div class="container1">
+        <ul>
+            <li><a href="#">小米商城</a></li>
+            <li><span class="sep">|</span></li>
+            <li><a href="#">MIUI</a></li>
+            <li><span class="sep">|</span></li>
+            <li><a href="#">米聊</a></li>
+            <li><span class="sep">|</span></li>
+            <li><a href="#">游戏</a></li>
+            <li><span class="sep">|</span></li>
+            <li><a href="#">多看阅读</a></li>
+            <li><span class="sep">|</span></li>
+            <li><a href="#">云服务</a></li>
+            <li><span class="sep">|</span></li>
+            <li><a href="#">金融</a></li>
+            <li><span class="sep">|</span></li>
+            <li><a href="#">小米商城移动版</a></li>
+            <li><span class="sep">|</span></li>
+            <li><a href="#">问题反馈</a></li>
+            <li><span class="sep">|</span></li>
+            <li><a href="#">Select Region</a></li>
+        </ul>
+    </div>
+    <div class="container2">
+        <ul>
+            <li><a href="#">登陆</a></li>
+            <li><span class="sep">|</span></li>
+            <li><a href="#">注册</a></li>
+            <li><span class="sep">|</span></li>
+            <li><a href="#"">消息通知</a></li>
+        </ul>
+    </div>
+    <div class="container3">
+        <a href="#" class="shopcar"><svg t="1499734804077" class="icon" style="" alignment-baseline="middle" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2552" xmlns:xlink="http://www.w3.org/1999/xlink" width="13.6px" height="13.6px"><defs><style type="text/css"></style></defs><path class="kiwi" d="M347.136 783.36q19.456 0 36.864 7.168t30.72 19.968 20.48 30.208 7.168 36.864-7.168 36.864-20.48 30.208-30.72 20.48-36.864 7.68q-20.48 0-37.376-7.68t-30.208-20.48-20.48-30.208-7.168-36.864 7.168-36.864 20.48-30.208 30.208-19.968 37.376-7.168zM773.12 785.408q19.456 0 37.376 7.168t30.72 19.968 20.48 30.208 7.68 36.864-7.68 36.864-20.48 30.208-30.72 20.48-37.376 7.68-36.864-7.68-30.208-20.48-20.48-30.208-7.68-36.864 7.68-36.864 20.48-30.208 30.208-19.968 36.864-7.168zM945.152 203.776q28.672 0 44.544 7.68t22.528 18.944 6.144 24.064-3.584 22.016-12.8 37.888-22.016 62.976-24.064 68.096-17.92 53.248q-13.312 40.96-33.792 56.832t-50.176 15.872l-34.816 0-66.56 0-87.04 0-95.232 0-253.952 0 15.36 92.16 516.096 0q49.152 0 49.152 41.984 0 20.48-9.728 35.328t-38.4 14.848l-49.152 0-95.232 0-117.76 0-119.808 0-98.304 0-56.32 0q-20.48 0-34.304-9.216t-23.04-24.064-14.848-32.256-8.704-32.768q-1.024-6.144-5.632-29.696t-11.264-58.88-14.848-78.848-16.384-87.552q-19.456-103.424-44.032-230.4l-76.8 0q-15.36 0-25.6-7.68t-16.896-18.432-9.216-23.04-2.56-22.528q0-20.48 13.824-33.792t37.376-13.312l22.528 0 20.48 0 25.6 0 34.816 0q20.48 0 32.768 6.144t19.456 15.36 10.24 19.456 5.12 17.408q2.048 8.192 4.096 23.04t4.096 30.208q3.072 18.432 6.144 38.912l700.416 0z" p-id="2553" fill="#b0b0b0"></path></svg>&nbsp;购物车（0）</a>
+    </div>
+</div>
+<div class="header">
+    <div class="pg1"><a href="#"><img src="milogo.png" height="55px" width="55px"></a> </div>
+    <div class="pg2"><a href="#"><img src="http://c1.mifile.cn/f/i/g/2015/gif/yyymix.gif" height="55px" width="165px"></a> </div>
+    <div class="menu">
+        <ul>
+            <li><a href="#">小米手机</a></li>
+            <li><a href="#">红米</a></li>
+            <li><a href="#">平板·笔记本</a></li>
+            <li><a href="#">电视</a></li>
+            <li><a href="#">盒子·影音</a></li>
+            <li><a href="#">路由器</a></li>
+            <li><a href="#">智能硬件</a></li>
+            <li><a href="#">服务</a></li>
+            <li><a href="#">社区</a></li>
+        </ul>
+    </div>
+    <div class="searchbar">
+            <input type="search" class="searchbarsize" value="" style="">
+    </div>
+    <div class="searchbutton">
+            <input type="submit" class="searchbuttonsize" value="">
+    </div>
+        <a href="#" style="position:absolute;background-color:#e0e0e0;text-decoration:none;display:block;width:72.69px;height:17.6px;right:140px;top:41.2px;font:13.6px 微软雅黑;">平衡车Plus</a>
+        <a href="#" style="position:absolute;background-color:#e0e0e0;text-decoration:none;display:block;width:77.36px;height:17.6px;right:58px;top: 41.2px;font:13.6px 微软雅黑;">红米Note4X</a>
+    <svg t="1499789500253" class="icon" style="position: absolute;z-index:2;right:12px;top:36px" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="30243" xmlns:xlink="http://www.w3.org/1999/xlink" width="28px" height="28px"><defs><style type="text/css"></style></defs><path d="M886.720915 793.185101 777.209756 683.684174c-10.07138-10.083659-26.412556-10.083659-36.492122 0l-2.949168 2.947122c0 0-54.103222-53.791114-55.537897-54.692646 42.85811-53.354162 68.520583-121.108289 68.520583-194.864106 0-171.993213-139.423423-311.413566-311.407426-311.413566-171.984003 0-311.406402 139.4224-311.406402 311.413566 0 171.97377 139.4224 311.406402 311.406402 311.406402 73.768097 0 141.53041-25.668613 194.883549-68.536956 0.902556 1.431605 54.689576 55.524594 54.689576 55.524594l-2.953262 2.951215c-10.07138 10.084683-10.07138 26.437116 0 36.506449l109.50502 109.503996c10.081613 10.083659 26.421766 10.083659 36.503379 0l54.750975-54.751998C896.795365 819.594587 896.795365 803.26569 886.720915 793.185101zM439.343725 628.522854c-105.736183 0-191.447287-85.712127-191.447287-191.44831 0-105.760742 85.711104-191.472869 191.447287-191.472869 105.748463 0 191.470823 85.712127 191.470823 191.472869C630.814548 542.809703 545.093211 628.522854 439.343725 628.522854z" p-id="30244" fill="grey"></path></svg>
+</div>
+<div class="category">
+        <div class="categorylist">
+          <ul>
+              <li><a href="#"><span>手机 电话卡</span><img src="arrowright1.png" class="charsize"></a></li>
+              <li><a href="#"><span>笔记本 平板</span><img src="arrowright1.png" class="charsize"></a></li>
+              <li><a href="#"><span>电视 盒子</span><img src="arrowright1.png" class="charsize"></a></li>
+              <li><a href="#"><span>路由器 智能硬件</span><img src="arrowright1.png" class="charsize"></a></li>
+              <li><a href="#"><span>移动电源 电池 插线板</span><img src="arrowright1.png" class="charsize"></a></li>
+              <li><a href="#"><span>耳机 音箱</span><img src="arrowright1.png" class="charsize"></a></li>
+              <li><a href="#"><span>保护套 贴膜</span><img src="arrowright1.png" class="charsize"></a></li>
+              <li><a href="#"><span>线材 支架 存储卡</span><img src="arrowright1.png" class="charsize"></a></li>
+              <li><a href="#"><span>箱包 服饰 鞋 眼镜</span><img src="arrowright1.png" class="charsize"></a></li>
+              <li><a href="#"><span>米兔 生活周边</span><img src="arrowright1.png" class="charsize"></a></li>
+          </ul>
+        </div>
+        <div id="slider">
+                <img src="p1.jpg" class="list" />
+                <img src="p2.jpg" class="list" />
+                <img src="p3.jpg" class="list" />
+                <img src="p4.jpg" class="list" />
+                <img src="p5.jpg" class="list" />
+        </div>
+        <ul id="tabs">
+            <li class="tab"></li>
+            <li class="tab"></li>
+            <li class="tab"></li>
+            <li class="tab"></li>
+            <li class="tab"></li>
+        </ul>
+        <a class="arrow" id="prev" style="display:block;width:41px;height:69px;line-height:69px;z-index: 6;position: absolute;left:234px;top: 195.5px;text-decoration: none;font-size:41px;color:#e0e0e0;text-align: start">&lt;</a>
+        <a class="arrow" id="next" style="display:block;width:41px;height:69px;line-height:69px;z-index: 6;position: absolute;right:0px;top: 195.5px;text-decoration: none;font-size:41px;color:#e0e0e0;text-align: end">&gt;</a>
+</div>
+<div class="ad">
+    <div class="district1">
+        <div class="exposure"><div class="expocell"><svg t="1499777889356" class="icon" style="" viewBox="0 0 1448 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="20773" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px"><defs><style type="text/css"></style></defs><path d="M960.268351 3.528128H484.721086s-78.169278-1.100927-78.169278 72.542508l-0.412848 875.053138s-7.329768 72.12966 74.503534 72.12966H963.930654s75.728316 1.102647 75.728317-69.203602V76.070636c0.00172 0 2.444403-72.542508-79.39062-72.542508zM644.111275 38.699315h156.355759v35.171186H644.111275V38.699315z m-58.622658 0c10.789087 0 19.54662 7.880231 19.54662 17.583873 0 9.705362-8.757533 17.585593-19.54662 17.585593-10.787367 0-19.5449-7.880231-19.5449-17.585593 0-9.703642 8.755812-17.583873 19.5449-17.583873z m136.809139 914.24959c-21.595377 0-39.09324-15.727779-39.09324-35.171187 0-19.409004 17.497863-35.171187 39.09324-35.171187 21.576455 0 39.077758 15.762183 39.077758 35.171187-0.00172 19.443408-17.503024 35.171187-39.077758 35.171187z m240.826125-140.645182H481.46991V109.039968h481.655691l-0.00172 703.263755z" fill="#d3d3d3" p-id="20774"></path></svg></div><span class="exposurefont">选购手机</span></div>
+        <div class="exposure"><div class="expocell"><svg t="1499778264909" class="icon" style="" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="21740" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px"><defs><style type="text/css"></style></defs><path d="M836.345598 257.721713l-28.427446 0c14.415314-24.441669 20.741393-47.75463 18.720364-69.379137-1.677199-18.098193-10.254551-43.982724-41.686425-64.611553-26.059516-17.143449-59.57177-21.348214-96.751554-12.059664-60.292178 15.137769-131.649366 67.180052-178.566932 130.073474C462.687386 178.852434 391.387503 126.809127 331.096349 111.671359c-37.210483-9.348925-70.751391-5.114484-96.807836 12.059664-31.404244 20.62883-39.983643 46.51336-41.659819 64.611553-2.02103 21.624507 4.246721 44.937468 18.720364 69.379137l-28.427446 0c-43.043329 0-78.073146 35.056424-78.073146 78.132498l0 100.636025c0 34.075073 22.474874 64.190975 54.991452 74.30431-3.090385 8.550747-4.708232 17.390066-4.708232 26.347065l0 301.923424c0 43.046399 35.069727 78.117149 78.117149 78.117149l552.85857 0c43.044352 0 78.05882-35.069727 78.05882-78.117149L864.166223 537.140587c0-9.014304-1.558495-17.882276-4.649903-26.376741 32.468482-10.169617 54.890144-40.285518 54.890144-74.274634l0-100.609419C914.405441 292.806789 879.390973 257.721713 836.345598 257.721713M786.10638 861.540931 537.426601 861.540931 537.426601 514.636037l248.680802 0c12.394285 0 22.445198 10.110265 22.445198 22.50455l0 301.923424C808.551578 851.459319 798.500665 861.540931 786.10638 861.540931M568.049039 257.721713c39.549761-45.61899 91.462085-81.468476 133.614114-92.043323 21.896706-5.487991 39.807634-3.985778 52.780087 4.565992 13.781888 9.055237 16.23373 17.129122 16.785292 23.227004 2.192945 22.35924-21.784142 52.504818-33.108049 64.250326L568.049039 257.721713zM858.763167 335.880817l0 100.609419c0 12.394285-10.024308 22.473851-22.417569 22.473851L537.426601 458.964086 537.426601 313.390593l298.918997 0C848.738859 313.390593 858.763167 323.488579 858.763167 335.880817M481.812979 514.636037l0 346.904894L233.24781 861.540931c-12.423961 0-22.477944-10.082636-22.477944-22.476921L210.769866 537.140587c0-12.394285 10.053983-22.50455 22.477944-22.50455L481.812979 514.636037zM248.039701 193.471386c0.547469-6.097882 3.03308-14.172791 16.756639-23.227004 12.882402-8.55177 30.794353-10.127661 52.809763-4.565992 41.917692 10.515494 93.773733 46.36805 133.410476 92.043323L281.088398 257.721713C270.948457 247.451812 245.81401 216.366839 248.039701 193.471386M160.445714 335.880817c0-12.391215 10.053983-22.490224 22.474874-22.490224l298.891368 0 0 145.573493L182.920588 458.964086c-12.420891 0-22.474874-10.079566-22.474874-22.473851L160.445714 335.880817z" p-id="21741" fill="#d3d3d3"></path></svg></div><span class="exposurefont">企业团购</span></div>
+        <div class="exposure"><div class="expocell"><svg t="1499778366202" class="icon" style="" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="23731" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px"><defs><style type="text/css"></style></defs><path d="M512.805342 139.303696c-213.960023 0-388.017244 173.167968-388.017244 386.006448s174.057221 385.976772 388.017244 385.976772 388.017244-173.138292 388.017244-385.976772S726.766388 139.303696 512.805342 139.303696zM512.805342 881.440144c-197.491956 0-358.169449-159.759587-358.169449-356.13 0-196.399065 160.678516-356.158652 358.169449-356.158652S870.975814 328.911078 870.975814 525.310144C870.975814 721.679533 710.297298 881.440144 512.805342 881.440144z" p-id="23732" fill="#d3d3d3"></path><path d="M512.805342 236.074693c-160.328545 0-290.765293 129.73783-290.765293 289.23545s130.436748 289.23545 290.765293 289.23545 290.765293-129.73783 290.765293-289.23545S673.133887 236.074693 512.805342 236.074693zM512.805342 799.621696c-152.094 0-275.841396-123.062803-275.841396-274.311553s123.747395-274.311553 275.841396-274.311553 275.841396 123.062803 275.841396 274.311553S664.899342 799.621696 512.805342 799.621696z" p-id="23733" fill="#d3d3d3"></path><path d="M540.801976 624.558565 540.801976 388.168694l-9.138124 0-65.539692 29.002544 4.298909 9.677407c7.870248-4.284583 14.501272-6.441713 19.878746-6.441713 9.31311 0 13.96199 6.266727 13.96199 18.800181l0 185.351452c0 17.197684-8.598842 25.795503-25.781176 25.795503l-13.976316 0 0 11.279904 113.37107 0 0-11.279904-12.358469 0C549.036521 650.355091 540.801976 641.756249 540.801976 624.558565z" p-id="23734" fill="#d3d3d3"></path></svg></div><span class="exposurefont">一元活动</span></div>
+        <div class="exposure"><div class="expocell"><svg t="1499778333284" class="icon" style="" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="22626" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px"><defs><style type="text/css"></style></defs><path d="M448.08583 895.482975l127.82834 0 0-351.526145L448.08583 543.956829 448.08583 895.482975zM288.302707 735.698828l127.827317 0 0-63.914682L288.302707 671.784146 288.302707 735.698828zM288.302707 575.912635l0 63.914682 127.827317 0 0-95.871511-95.871511 0C302.610574 543.956829 288.302707 558.249347 288.302707 575.912635zM288.302707 863.526145c0 17.630542 14.307867 31.956829 31.956829 31.956829l95.871511 0L416.131047 767.654634 288.302707 767.654634 288.302707 863.526145zM831.568804 0.688685 352.215342 0.688685c0.577145 0-191.741999 192.739722-191.741999 191.741999l0 798.924825c0 17.631566 14.309914 31.955806 31.956829 31.955806l639.139655 0c17.646915 0 31.956829-14.322194 31.956829-31.955806L863.526657 32.644491C863.526657 14.982226 849.216743 0.688685 831.568804 0.688685zM767.656169 895.482975c0 17.632589-14.308891 31.956829-31.956829 31.956829L288.302707 927.439804c-17.649985 0-31.957853-14.323217-31.957853-31.956829l0-671.094438c0 0 126.018112-127.82834 127.829364-127.82834l351.525122 0c17.647939 0 31.956829 14.292518 31.956829 31.958876L767.656169 895.482975zM703.742511 543.956829l-95.871511 0 0 95.871511 127.827317 0 0-63.914682C735.698317 558.249347 721.390449 543.956829 703.742511 543.956829zM607.870999 895.482975l95.871511 0c17.646915 0 31.956829-14.325263 31.956829-31.956829l0-95.871511L607.870999 767.654634 607.870999 895.482975zM607.870999 735.698828l127.827317 0 0-63.914682L607.870999 671.784146 607.870999 735.698828z" p-id="22627" fill="#d3d3d3"></path></svg></div><span class="exposurefont">小米移动</span></div>
+        <div class="exposure"><div class="expocell"><svg t="1499778388526" class="icon" style="" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="24314" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px"><defs><style type="text/css"></style></defs><path d="M440.890647 412.436026l170.662447 0 0 220.438995-170.662447 0 0-220.438995ZM440.890647 387.547753 440.890647 391.10322l3.555467 0L611.553094 391.10322l0-3.555467c0-9.798869-7.971359-17.777338-17.777338-17.777338l-135.107771 0C448.862006 369.770414 440.890647 377.748884 440.890647 387.547753zM440.890647 654.207826l0 3.555467c0 9.798869 7.971359 17.777338 17.777338 17.777338l135.107771 0c9.80598 0 17.777338-7.978469 17.777338-17.777338L611.553094 654.207826 444.446115 654.207826 440.890647 654.207826zM1007.532638 282.391241c-21.944347-126.27599-142.837358-246.415242-268.651136-266.972956-125.813778-20.557714-331.696688-20.557714-457.510467 0C155.550146 35.976 35.858882 156.115252 15.372277 282.391241c-20.479494 126.27599-20.479494 332.912659 0 459.195759 20.479494 126.27599 140.177868 246.415242 265.991647 266.972956 125.813778 20.557714 331.696688 20.557714 457.510467 0 125.813778-20.557714 246.706789-140.696966 268.651136-266.972956C1029.469874 615.311011 1029.469874 408.66723 1007.532638 282.391241zM222.727151 604.210841c-7.203378-26.203796-11.128614-53.75156-11.128614-82.216634 0-143.128906 97.348704-263.851255 229.29211-299.697479l0-34.025826 95.265201 41.392754L440.890647 271.063521l0-26.630453c-120.032588 35.227573-207.959303 146.286161-207.959303 277.561138 0 24.56117 3.100368 48.404136 8.888669 71.194684L222.727151 604.210841zM593.775756 348.437608c21.567467 0 39.110144 17.542677 39.110144 39.110144L632.8859 391.10322l0 24.17718 0 220.438995L632.8859 654.207826l0 3.555467c0 21.567467-17.542677 39.110144-39.110144 39.110144l-135.107771 0c-21.567467 0-39.110144-17.542677-39.110144-39.110144L419.557841 654.207826l0-18.488432 0-220.438995L419.557841 391.10322l0-3.555467c0-21.567467 17.542677-39.110144 39.110144-39.110144L593.775756 348.437608zM522.225525 832.621194c-88.026268 0-167.562079-36.855978-224.12957-95.898073l-27.36288 15.793387-11.78282-103.201004 83.482381 61.80825-25.272264 14.591639c52.428926 52.784472 124.967577 85.572996 205.065152 85.572996 80.673561 0 153.702867-33.229401 206.224235-86.668079l18.993308 10.965062C690.804468 795.274561 610.813557 832.621194 522.225525 832.621194zM767.339465 687.629223l11.78282-103.201004 22.257227 12.84946c6.499395-24.034961 10.133083-49.229005 10.133083-75.283472 0-133.536254-90.977307-246.180581-214.188482-279.345983l0-22.0439c135.107771 33.677389 235.521288 156.00681 235.521288 301.389882 0 29.965481-4.344782 58.914099-12.301919 86.340976l30.278363 17.478679L767.339465 687.629223z" fill="#d3d3d3" p-id="24315"></path></svg></div><span class="exposurefont">以旧换新</span></div>
+        <div class="exposure"><div class="expocell"><svg t="1499778440139" class="icon" style="" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="29245" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px"><defs><style type="text/css"></style></defs><path d="M826.55 809h-632.7c-42.3 0-76.5-34.2-76.5-76.5v-441c0-42.3 34.2-76.5 76.5-76.5h632.25c42.3 0 76.5 34.2 76.5 76.5v441c0.45 42.3-33.75 76.5-76.050 76.5zM193.85 253.25c-21.15 0-38.25 17.1-38.25 38.25v441c0 21.15 17.1 38.25 38.25 38.25h632.25c21.15 0 38.25-17.1 38.25-38.25v-441c0-21.15-17.1-38.25-38.25-38.25h-632.25zM136.7 387.35h747.45v38.25h-747.45v-38.25zM193.85 540.8h498.15v38.25h-498.15v-38.25zM193.85 636.65h383.4v38.25h-383.4v-38.25zM634.85 636.65h57.15v38.25h-57.6v-38.25z" fill="#d3d3d3" p-id="29246"></path></svg></div><span class="exposurefont">话费充值</span></div>
+    </div>
+    <div class="district2"><img src="ad1.jpg" width="316px" height="170px"></div>
+    <div class="district3"><img src="ad2.jpg" width="316px" height="170px"></div>
+    <div class="district4"><img src="ad3.jpg" width="316px" height="170px"></div>
+</div>
+<div class="listbar">
+    <span style="font:22px 微软雅黑;color:#333;font-weight: 200">智能</span>
+    <ul>
+        <li>热门</li>
+        <li>出行</li>
+        <li>健康</li>
+        <li>酷玩</li>
+        <li>路由器</li>
+    </ul>
+</div>
+<div class="zhinenglist">
+    <div class="zhinengpg"><img src="米家扫地机器人.jpg" width="234px" height="300px"></div>
+    <div class="zhinengpg">
+        <div class="brick">
+            <img src="体脂秤.jpg" class="brickpg">
+            <a href="#" class="bricka">小米体脂称</a>
+            <p class="brickp">简约纤薄，隐藏式LED显示屏</p>
+            <p class="brickprice">199元</p>
+        </div>
+    </div>
+    <div class="zhinengpg">
+        <div class="brick">
+            <img src="相机套装.jpg" class="brickpg">
+            <a href="#" class="bricka">米家全景相机套餐</a>
+            <p class="brickp">2388万有效像素，IP67级防水防尘</p>
+            <p class="brickprice">1699</p>
+        </div>
+    </div>
+    <div class="zhinengpg">
+        <div class="brick">
+            <img src="平衡车.png" class="brickpg">
+            <a href="#" class="bricka">九号平衡车 Plus</a>
+            <p class="brickp">35km超长续航，一键自动跟随</p>
+            <p class="brickprice">3499元</p>
+        </div>
+    </div>
+    <div class="zhinengpg">
+        <div class="brick">
+            <img src="空气净化器.jpg" class="brickpg">
+            <a href="#" class="bricka">米家车载空气净化器</a>
+            <p class="brickp">双风机循环气流，高效净化车内空气</p>
+            <p class="brickprice">449元</p>
+        </div>
+    </div>
+    <div class="zhinengpg"><img src="米家电饭煲.jpg" width="234px" height="300px"></div>
+    <div class="zhinengpg">
+        <div class="brick">
+            <img src="机器人.jpg" class="brickpg">
+            <a href="#" class="bricka">米兔积木机器人 履带机甲</a>
+            <p class="brickp">履带底盘，智能操控，百变拼插</p>
+            <p class="brickprice">499元</p>
+        </div>
+    </div>
+    <div class="zhinengpg">
+        <div class="brick">
+            <img src="电话手表.jpg" class="brickpg">
+            <a href="#" class="bricka">米兔儿童电话手表2</a>
+            <p class="brickp">AMOLED高清彩屏，6天超长续航</p>
+            <p class="brickprice">399元</p>
+        </div>
+    </div>
+    <div class="zhinengpg">
+    <div class="brick">
+        <img src="无人机.jpg" class="brickpg">
+        <a href="#" class="bricka">小米无人机 4k版</a>
+        <p class="brickp">限量送无线连接器</p>
+        <p class="brickprice">2999元</p>
+    </div>
+    </div>
+    <div class="zhinengpg" style="display: flex;flex-direction: column;justify-content: space-between">
+        <div class="brickpg2">
+            <a class="child1" href="#">米家扫地机..</a>
+            <p class="child2">1699元</p>
+            <a class="child4" href="#"><img src="扫地机器人.jpg" width="80px" height="80px"></a>
+        </div>
+        <div class="brickpg2">
+            <a class="child1" href="#">浏览更多</a>
+            <p class="child3">热门</p>
+            <a class="child4" href="#"><img src="arrowright2.png" width="50px" height="50px" style="position: absolute;top:15px;right:15px"></a>
+        </div>
+    </div>
+</div>
+<div style="display:block;margin-top: 32px;width:1226px;height: 57.6px;line-height: 57.6px">
+    <span style="font:22px 微软雅黑;color:#333;font-weight: 200">热评产品</span>
+</div>
+<div class="repinglist">
+    <div class="repingpg">
+        <img src="空气净化器2.jpg" class="repingimg">
+        <a rel="#" class="repinga1">先五星好评。再来说说小米空气净化器，北方的天气雾霾越来越常态，这就迫切需要一台性价比高的空气净化器</a>
+        <p class="repingp1">来自于&nbsp;sddyboy&nbsp;的评价</p>
+        <div class="repingprice">
+        <a rel="#" class="repinga2">小米空气净化器2</a>
+        <span class="sep">&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;</span>
+        <p class="price">699元</p>
+        </div>
+    </div>
+    <div class="repingpg">
+        <img src="电饭煲.jpg" class="repingimg">
+        <a rel="#" class="repinga1">包装很让人感动，式样也很可爱，做出的饭全家人都爱吃，超爱五星！手机控制还是不太熟练，最主要是没有连接..</a>
+        <p class="repingp1">来自于&nbsp;田密&nbsp;的评价</p>
+        <div class="repingprice">
+            <a rel="#" class="repinga2">米家压力IH电饭煲</a>
+            <span class="sep">&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;</span>
+            <p class="price">999元</p>
+        </div>
+    </div>
+    <div class="repingpg">        <img src="插线板.jpg" class="repingimg">
+        <a rel="#" class="repinga1">东西真心不错，用过最好用的插线板，做工外观没得挑剔，3geUSB接口很实用，冲电快，建议不包邮的应该在..</a>
+        <p class="repingp1">来自于s&nbsp;yinyin19891117&nbsp;的评价</p>
+        <div class="repingprice">
+            <a rel="#" class="repinga2">小米插线板</a>
+            <span class="sep">&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;</span>
+            <p class="price">49元</p>
+        </div>
+    </div>
+    <div class="repingpg">
+        <img src="行李箱.jpg" class="repingimg">
+        <a rel="#" class="repinga1">这箱子很好，外观漂亮，实用性强。很轻，有点软但不影响他的坚固</a>
+        <p class="repingp1">来自于&nbsp;子书雁&nbsp;的评价</p>
+        <div class="repingprice">
+            <a rel="#" class="repinga2">90分旅行箱&nbsp;20寸</a>
+            <span class="sep">&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;</span>
+            <p class="price">299元</p>
+        </div>
+    </div>
+</div>
+</div>
+</body>
+</html>
