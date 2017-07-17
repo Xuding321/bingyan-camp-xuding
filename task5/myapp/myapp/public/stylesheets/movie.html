@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=0">
+    <script src="http://g.tbcdn.cn/mtb/lib-flexible/0.3.4/??flexible_css.js,flexible.js"></script>
+    <script type="text/javascript">
+            function loadmessage() {
+                var xmlhttp;
+                if (window.XMLHttpRequest) {
+                    xmlhttp = new XMLHttpRequest();
+                }
+                else {
+                    xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+                }
+                xmlhttp.onreadystatechange = function () {
+                    if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+                        var result = xmlhttp.responseText;
+                        var subjects = JSON.parse(result);
+                        var imgs = document.getElementsByClassName("pg");
+                        var titles = document.getElementsByClassName("title");
+                        var scores = document.getElementsByClassName("score");
+                        for (var i = 0; i < 10; i++) {
+                            imgs[i].src = subjects[i].subjects.images.medium;
+                            titles[i].innerHTML = subjects[i].subjects.title;
+                            scores[i].innerHTML = subjects[i].subjects.rating.average;
+                        }
+                    }
+                }
+                xmlhttp.open("GET", "http://localhost:3000/api/v1/movie/top250", true);
+                xmlhttp.send();
+            }
+    </script>
+    <link rel="stylesheet" href="http://localhost:3000/api/v1/movie/css" charset="UTF-8">
+    <title>影院热评</title>
+</head>
+    <body>
+    <script>
+        loadmessage();
+    </script>
+    <div class="topbar">影院热评</div>
+    <div class="message">
+        <div class="a">
+            <img class="pg">
+            <p class="title">mmm</p>
+            <p class="score">2.0</p>
+        </div>
+        <div class="a">
+            <img class="pg">
+            <p class="title"></p>
+            <p class="score"></p>
+        </div>
+        <div class="a">
+            <img class="pg">
+            <p class="title"></p>
+            <p class="score"></p>
+        </div>
+        <div class="a">
+            <img class="pg">
+            <p class="title"></p>
+            <p class="score"></p>
+        </div>
+        <div class="a">
+            <img class="pg">
+            <p class="title"></p>
+            <p class="score"></p>
+        </div>
+        <div class="a">
+            <img class="pg">
+            <p class="title"></p>
+            <p class="score"></p>
+        </div>
+        <div class="a">
+            <img class="pg">
+            <p class="title"></p>
+            <p class="score"></p>
+        </div>
+        <div class="a">
+            <img class="pg">
+            <p class="title"></p>
+            <p class="score"></p>
+        </div>
+        <div class="a">
+            <img class="pg">
+            <p class="title"></p>
+            <p class="score"></p>
+        </div>
+        <div class="a">
+            <img class="pg">
+            <p class="title"></p>
+            <p class="score"></p>
+        </div>
+    </div>
+    </body>
+</html>
