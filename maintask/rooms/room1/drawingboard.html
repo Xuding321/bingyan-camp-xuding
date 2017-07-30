@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>Title</title>
+    <link rel="stylesheet" href="drawingboard.css" type="text/css">
+</head>
+<body>
+<div>
+<span class="a">关键词：</span><span id="focus">mmmm</span>
+
+<canvas id="my-canvas" width="500" height="500"></canvas>
+<div>
+    <span class="b">画笔颜色：</span><input type="color" id="line-color" /><br>
+
+    <span class="c">画笔宽度：</span><input type="range" id="line-width" max="10" /><br>
+
+    <span class="d">画笔的透明度：</span><input type="range" id="opacity" max="10" /><br>
+
+    <input type="button"  id="e" value="橡皮擦" />
+
+    <input type="button"  value="重画" id="clear" /><br/>
+
+    <input type="button" value="开始" id="begin">
+
+    <span class="f">倒计时：</span><input type="text" id="count" value="60"/>
+
+    <ul id="messages" class="messages"></ul>
+</div>
+</div>
+<script>
+    var thisURL = document.URL;
+    var b = thisURL.split('?')[1];
+    var nickname = b.split('=')[1];
+    var ws = new WebSocket("ws://localhost:8181");
+    ws.onopen = function(e) {
+        console.log('Connection to server opened');
+    };
+    var question = new Array("cat","dog","apple","pen","father");
+    var focus = document.getElementById("focus");
+    var oLineColor = document.getElementById("line-color");
+    var oLineWidth = document.getElementById("line-width");
+    oE = document.getElementById("e");
+    var oOpacity = document.getElementById("opacity");
+    var oCanvas = document.getElementById("my-canvas");
+    var context = oCanvas.getContext("2d");
+    var oClear = document.getElementById("clear");
+    var oBegin = document.getElementById("begin");
+    var oCount = document.getElementById("count");
+    oCanvas.onmousedown=function (ev) {
+        context.beginPath();
+        context.strokeStyle = oLineColor.value;
+        context.lineWidth = oLineWidth.value;
+        context.globalAlpha = oOpacity.value/10;
+        if(oE.className=="active"){
+            context.strokeStyle = "#fff"
+        }
+        var oldX = ev.offsetX;
+        var oldY = ev.offsetY;
+        context.moveTo(oldX,oldY);
+        var type = 1;
+        var click = 1;
+        var picture = new Object();
+        picture.x = ev.offsetX;
+        picture.y = ev.offsetY;
+        picture.type = 1;
+        picture.click = click;
+        picture.color = oLineColor.value;
+        picture.width = oLineWidth.value;
+        picture.opacity = oOpacity.value;
+        picture.eraser = oE.className;
+        picture.room = 1;
+        ws.send(JSON.stringify(picture));
+        document.onmousemove=function (ev) {
+            click = 0;
+            context.lineTo(ev.offsetX,ev.offsetY);
+            context.stroke();
+            picture.x = ev.offsetX;
+            picture.y = ev.offsetY;
+            picture.click = click;
+            ws.send(JSON.stringify(picture));
+        };
+        document.onmouseup=function () {
+            console.log("onmouseup");
+            document.onmousemove=null;
+            document.onmouseup =null;
+        }
+    };
+    ws.onmessage = function (e) {
+        var x = JSON.parse(e.data);
+        if (x.type == 4 && x.room == 1) {
+            var oLi = document.createElement("li");
+            var oUl = document.getElementById("messages");
+            oLi.innerHTML = x.nickname+":"+ x.message;
+            oUl.appendChild(oLi);
+        }
+    }
+    oClear.onclick = function (){
+        context.clearRect(0,0,500,500);
+        ws.send(JSON.stringify({
+            "type": 2,
+            "room": 1
+        }))
+    };
+    oBegin.onclick = function(){
+        var m = Math.floor((Math.random()*question.length));
+        focus.innerHTML = question[m];
+        ws.send(JSON.stringify({
+            "type":5,
+            "room":1,
+            "focus":question[m]
+        }));
+        var i = 60;
+        var t;
+        function  timecount() {
+            oCount.value = i;
+            i = i - 1;
+            if (i >= 0) {
+                t = setTimeout(timecount, 1000);
+            }
+        }
+        timecount();
+        ws.send(JSON.stringify({
+            "type": 3,
+            "room":1
+        }))
+    };
+    oE.onclick=function () {
+        if(this.className=="active"){
+            this.className=""
+        }else {
+            this.className="active"
+        }
+    };
+</script>
+</body>
+</html>

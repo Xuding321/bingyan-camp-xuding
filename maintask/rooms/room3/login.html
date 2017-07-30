@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="utf-8">
+<link type="text/css" rel="stylesheet" href="login.css" charset="utf-8">
+<head>
+    <script>
+        function todraw(){
+            var nickname = document.getElementById("nickname").value;
+            window.location.href="./drawingboard.html?nickname="+ nickname;
+        }
+        function toshow(){
+            var nickname = document.getElementById("nickname").value;
+            window.location.href="./showingboard.html?nickname="+ nickname;
+        }
+    </script>
+</head>
+<body>
+<div class="container1"><span class="a">用户名：</span><input id="nickname" type="text" placeholder="请输入您的用户名"></div>
+<div class="container2">
+    <input type="button" onclick="todraw()" value="我来画" id="draw">
+    <input type="button" onclick="toshow()" value="我来猜" id="guess">
+</div>
+</body>
+</html>

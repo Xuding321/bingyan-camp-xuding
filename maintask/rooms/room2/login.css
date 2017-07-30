@@ -1,0 +1,46 @@
+*{
+    margin:0;
+    padding:0;
+    border: 0;
+}
+body{
+    position: relative;
+}
+span{
+    position: relative;
+    top:100px;
+    left:450px;
+    font: 40px "微软雅黑";
+    color: black;
+}
+#nickname{
+    position:relative;
+    top:100px;
+    left:500px;
+    width: 600px;
+    height:60px;
+    padding-left:60px;
+    font: 40px "微软雅黑";
+    color: black;
+    border: 1px solid black;
+}
+#draw{
+    position: absolute;
+    top:200px;
+    left:500px;
+    width:200px;
+    height:60px;
+    font: 40px "微软雅黑";
+    color: black;
+    border: 1px solid black;
+}
+#guess{
+    position: absolute;
+    top:200px;
+    left:850px;
+    width:200px;
+    height:60px;
+    font: 40px "微软雅黑";
+    color: black;
+    border: 1px solid black;
+}

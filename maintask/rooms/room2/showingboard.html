@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="showingboard.css">
+</head>
+<body>
+<canvas id="mycanvas" width="500+" height="500"></canvas>
+<span class="a">倒计时：</span><input type="text" id="count" value="60"/>
+<ul id="messages" class="messages"></ul><br>
+<input class="message" type="text" id="message" name="message" placeholder="请输入要发送的信息" value="" autofocus/>
+<input type="button" id="send" class="send" onclick="sendMessage(this.value)" value="发送！">
+<script>
+    var ws = new WebSocket("ws://localhost:8181");
+    ws.onopen = function(e) {
+        console.log('Connection to server opened');
+    };
+    var thisURL = document.URL;
+    var b = thisURL.split('?')[1];
+    var nickname = b.split('=')[1];
+    var focus;
+    var oCanvas = document.getElementById("mycanvas");
+    var context = oCanvas.getContext("2d");
+    var oCount = document.getElementById("count");
+    var oMessage = document.getElementById("message");
+    var oUl = document.getElementById("messages");
+    ws.onmessage = function (e) {
+        var x = JSON.parse(e.data);
+        if (x.room == 2) {
+            if (x.type == 5) {
+                focus = x.focus;
+            }
+            else if (x.type == 1) {
+                var picture = x;
+                context.strokeStyle = picture.color;
+                context.lineWidth = picture.width;
+                context.globalAlpha = picture.opacity / 10;
+                if (picture.eraser == "active") {
+                    context.strokeStyle = "#fff";
+                }
+                var oldX = picture.x;
+                var oldY = picture.y;
+                if (picture.click == 1) {
+                    context.beginPath();
+                    context.moveTo(oldX, oldY);
+                }
+                else {
+                    context.lineTo(oldX, oldY);
+                    context.stroke();
+                }
+            }
+            else if (x.type == 2) {
+                context.clearRect(0, 0, 500, 500);
+            }
+            else if (x.type == 3) {
+                var i = 60;
+                var t;
+
+                function timecount() {
+                    oCount.value = i;
+                    i = i - 1;
+                    if (i >= 0) {
+                        t = setTimeout(timecount, 1000);
+                    }
+                }
+
+                timecount();
+            }
+            else if (x.type == 4) {
+                var oLi = document.createElement("li");
+                if (x.message == focus) {
+                    oLi.innerHTML = x.nickname + ":" + "******";
+                }
+                else {
+                    oLi.innerHTML = x.nickname + ":" + x.message.replace(focus, "******");
+                }
+                oUl.appendChild(oLi);
+            }
+        }
+    }
+    function sendMessage(){
+        var oLi = document.createElement("li");
+        oLi.innerHTML = nickname+":"+oMessage.value;
+        oUl.appendChild(oLi);
+        if(oMessage.value == focus){
+            alert("猜对了！");
+        }
+        ws.send(JSON.stringify({
+            "type":4,
+            "room":2,
+            "nickname":nickname,
+            "message":oMessage.value
+        }))
+        oMessage.value="";
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+*{
+    margin:0;
+    padding:0;
+    border:0;
+}
+body{
+    position: relative;
+}
+p{
+    left:400px;
+    top:100px;
+    display: block;
+    font:20px "微软雅黑";
+    color: grey;
+    position: absolute;
+}
+ul{
+    left: 500px;
+    top:140px;
+    position: absolute;
+}
+a{
+    text-decoration: none;
+    font:15px "微软雅黑";
+    color: black;
+}
