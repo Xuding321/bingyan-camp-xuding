@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=0">
+    <script src="http://g.tbcdn.cn/mtb/lib-flexible/0.3.4/??flexible_css.js,flexible.js"></script>
+    <script
+            src="https://code.jquery.com/jquery-3.2.1.min.js"
+            integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+            crossorigin="anonymous"></script>
+
+    <script type="text/javascript">
+        $.ajax({
+            type : "get", //jquey是不支持post方式跨域的
+            async: false,
+            url : "http://api.douban.com/v2/movie/top250", //跨域请求的URL
+            dataType : "jsonp",
+            //传递给请求处理程序，用以获得jsonp回调函数名的参数名(默认为:callback)
+            jsonp: "callback",
+            //自定义的jsonp回调函数名称，默认为jQuery自动生成的随机函数名
+            jsonpCallback:"success",
+            //成功获取跨域服务器上的json数据后,会动态执行这个callback函数
+            success : function(json){
+                var imgs = document.getElementsByClassName("pg");
+                var titles = document.getElementsByClassName("title");
+                var scores = document.getElementsByClassName("score");
+                for (var i = 0; i < 10; i++) {
+                    imgs[i].src = json.subjects[i].images.medium;
+                    titles[i].innerHTML = json.subjects[i].title;
+                    scores[i].innerHTML =json.subjects[i].rating.average;
+                }
+            }
+        });
+    </script>
+    <link rel="stylesheet" href="movie.css" charset="UTF-8">
+    <title>影院热评</title>
+</head>
+    <body>
+    <div class="topbar">影院热评</div>
+    <div class="message">
+        <div class="a">
+            <img class="pg">
+            <p class="title"></p>
+            <p class="score"></p>
+        </div>
+        <div class="a">
+            <img class="pg">
+            <p class="title"></p>
+            <p class="score"></p>
+        </div>
+        <div class="a">
+            <img class="pg">
+            <p class="title"></p>
+            <p class="score"></p>
+        </div>
+        <div class="a">
+            <img class="pg">
+            <p class="title"></p>
+            <p class="score"></p>
+        </div>
+        <div class="a">
+            <img class="pg">
+            <p class="title"></p>
+            <p class="score"></p>
+        </div>
+        <div class="a">
+            <img class="pg">
+            <p class="title"></p>
+            <p class="score"></p>
+        </div>
+        <div class="a">
+            <img class="pg">
+            <p class="title"></p>
+            <p class="score"></p>
+        </div>
+        <div class="a">
+            <img class="pg">
+            <p class="title"></p>
+            <p class="score"></p>
+        </div>
+        <div class="a">
+            <img class="pg">
+            <p class="title"></p>
+            <p class="score"></p>
+        </div>
+        <div class="a">
+            <img class="pg">
+            <p class="title"></p>
+            <p class="score"></p>
+        </div>
+    </div>
+    </body>
+</html>
